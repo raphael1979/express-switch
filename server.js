@@ -5,11 +5,11 @@ var path = require("path");
 var fs = require('fs');
 var datajson = require("./data/blog.json");
 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "public"));
 
 app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, "/public/index.html"));
@@ -20,7 +20,7 @@ app.post('/post', function(req,res){
 		if(err){
 			console.log(err);
 		}
-		
+
 		var dataparsed=JSON.parse(data);
 		dataparsed.articles.push(req.body);
 		var datastring=JSON.stringify(dataparsed, null, 2);
