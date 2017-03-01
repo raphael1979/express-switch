@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var path = require("path");
 var fs = require('fs');
-var datajson = require("./data/crm.json");
+var datajson = require("./data/blog.json");
 
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -20,6 +20,7 @@ app.post('/post', function(req,res){
 		if(err){
 			console.log(err);
 		}
+		
 		var dataparsed=JSON.parse(data);
 		dataparsed.articles.push(req.body);
 		var datastring=JSON.stringify(dataparsed, null, 2);
