@@ -14,7 +14,6 @@ app.get('/', function(req, res){
 	response.sendFile(path.join(__dirname + "public/index.html"));
 });
 
-
 app.listen(1337, function(){
 	console.log('ca marche')
 })
