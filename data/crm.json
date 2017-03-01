@@ -1,13 +1,9 @@
-
 {
-  "customers": [
+  "articles": [
     {
-      "name": "jean jacques",
-      "job":"developpeur"
-    },
-    {
-     "name": "jean claude",
-     "job":"developpeur"
-   }
- ]
+      "id": "0",
+      "title": "titre",
+      "content":"message"
+    }
+  ]
 }
