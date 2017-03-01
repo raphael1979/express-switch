@@ -1,0 +1,13 @@
+
+{
+  "customers": [
+    {
+      "name": "jean jacques",
+      "job":"developpeur"
+    },
+    {
+     "name": "jean claude",
+     "job":"developpeur"
+   }
+ ]
+}
